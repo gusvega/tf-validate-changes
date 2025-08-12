@@ -1,0 +1,16 @@
+name: "Validate Changes"
+description: "Run terraform fmt -check and validate inside a container."
+author: "gusvega"
+branding:
+  icon: "check"
+  color: "blue"
+
+inputs:
+  workdir:
+    description: "Working directory"
+    required: false
+    default: "."
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
